@@ -75,11 +75,3 @@ jobs:
 
 
 
-- This setup ensures that **GitHub Actions** automatically deploys your project to **GitHub Pages** whenever you push changes to the `main` branch.
-
-
-## 👨‍💻 Developed By  
-
-**WOODcraft** – [Telegram](https://t.me/Farooq_is_king)  
-
-🔥 **Join for Updates & Support!**
