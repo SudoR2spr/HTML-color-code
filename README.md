@@ -39,6 +39,8 @@ You can configure **GitHub Actions** to automatically run the workflow whenever 
 
 If the file **.github/workflows/deploy.yml** does not exist, create the following file:  
 
+---
+
 ```
 name: Deploy to GitHub Pages
 
@@ -70,7 +72,9 @@ jobs:
           branch: gh-pages
           folder: build```
 
-This setup ensures that **GitHub Actions** automatically deploys your project to **GitHub Pages** whenever you push changes to the `main` branch.
+
+---
+- This setup ensures that **GitHub Actions** automatically deploys your project to **GitHub Pages** whenever you push changes to the `main` branch.
 
 
 ## 👨‍💻 Developed By  
