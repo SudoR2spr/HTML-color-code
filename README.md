@@ -41,37 +41,11 @@ If the file **.github/workflows/deploy.yml** does not exist, create the followin
 
 ---
 
-```
-name: Deploy to GitHub Pages
-
-on:
-  push:
-    branches:
-      - main  
-
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
-      - name: Build Project
-        run: |
-          npm install
-          npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: build```
+- This setup ensures that **GitHub Actions** automatically deploys your project to **GitHub Pages** whenever you push changes to the `main` branch.
 
 
+## 👨‍💻 Developed By  
 
+**WOODcraft** – [Telegram](https://t.me/Farooq_is_king)  
 
+🔥 **Join for Updates & Support!**
