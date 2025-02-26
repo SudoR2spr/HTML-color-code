@@ -1,0 +1,153 @@
+/* -------- WOODcraft --------- */
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #e3f2fd;
+}
+
+/* হেডারের স্টাইল */
+.header {
+    display: flex;
+    justify-content: center;  /* নাম ও বাটন মাঝখানে আনবে */
+    align-items: center;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* নাম ও বাটন একই লাইনে রাখার জন্য নতুন ক্লাস */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;  /* নাম ও বাটনের মধ্যে গ্যাপ রাখবে */
+}
+
+/* টাইটেল (নাম ছোট এবং বোল্ড) */
+.title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* চ্যানেলের বাটন (slim & compact) */
+.channel-btn {
+    text-decoration: none;
+    background: linear-gradient(145deg, #ffffff, #e3e3e3);
+    color: #6a11cb;
+    padding: 4px 10px; /* সরু ও ছোট করা হয়েছে */
+    font-size: 0.85rem; /* ফন্ট ছোট করা হয়েছে */
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px #20082C, -2px -2px 4px #20082C;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    margin-left: 6px; /* নামের পাশে রাখার জন্য */
+}
+
+/* হোভার ইফেক্ট */
+.channel-btn:hover {
+    background: linear-gradient(145deg, #e3e3e3, #ffffff);
+    box-shadow: inset 2px 2px 4px #bcbcbc, inset -2px -2px 4px #ffffff;
+    color: #2575fc;
+    transform: translateY(2px);
+}
+
+/* ক্লিক করার পর ইফেক্ট */
+.channel-btn:active {
+    box-shadow: inset 1px 1px 3px #bcbcbc, inset -1px -1px 3px #ffffff;
+    transform: translateY(3px);
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .color {
+    margin: 12px;
+    padding: 7px;
+    list-style: none;
+    cursor: pointer;
+    text-align: center;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(52,87,220,.08);
+    transition: all .3s ease;
+}
+
+.container .color:active {
+    transform: scale(.95);
+}
+
+.color .rect-box {
+    width: 185px;
+    height: 188px;
+    border-radius: 4px;
+}
+
+.color:hover .rect-box {
+    filter: brightness(107%);
+}
+
+.color .hex-value {
+    display: block;
+    color: #444;
+    user-select: none;
+    font-weight: 500;
+    font-size: 1.15rem;
+    margin: 12px 0 8px;
+    text-transform: uppercase;
+}
+
+.refresh-btn {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    background: #8a6cff;
+    padding: 13px 20px;
+    border: 2px solid #fff;
+    transform: translateX(-50%);
+    box-shadow: 0 15px 30px rgba(52,87,220,.2);
+    transition: all .3s ease;
+}
+
+.refresh-btn:hover {
+    background: #704dff;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        margin: 10px;
+    }
+    .container .color {
+        margin: 8px;
+        padding: 5px;
+        width: calc(100% / 2 - 20px);
+    }
+    .color .rect-box {
+        width: 100%;
+        height: 148px;
+    }
+    .color .hex-value {
+        font-size: 1.05rem;
+    }
+    .refresh-btn {
+        font-size: 1rem;
+    }
+  }
